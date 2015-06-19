@@ -1,17 +1,20 @@
 source 'https://rubygems.org'
 
-gem "redcarpet"
 gem "activesupport"
-gem "highline"
-gem "rake"
-gem "coderay", :git => "git://github.com/dgeb/coderay.git", :branch => "handlebars"
-gem "middleman", '~> 3.0'
-gem "thin"
-gem "rack"
-gem "listen"
+gem "bourbon"
 gem "builder"
+gem "highline"
+gem "coderay", :git => "git://github.com/dgeb/coderay.git", :branch => "handlebars"
+gem "listen"
+gem "rack"
+gem "redcarpet"
+gem "neat"
+gem "normalize-scss"
+gem "thin"
+gem "middleman"
 gem "middleman-alias"
 gem "middleman-swiftype", :git => "git://github.com/LeonB/middleman-swiftype.git"
+gem "rake"
 gem "underscore-rails"
 
 source 'https://rails-assets.org' do
@@ -20,16 +23,16 @@ source 'https://rails-assets.org' do
 end
 
 group :development, :test do
-  gem 'pry'
+  gem "pry"
 end
 
 group :test do
-  gem "rspec"
   gem "capybara"
-  gem "poltergeist"
   gem "hashie"
+  gem "poltergeist"
+  gem "rspec"
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: [:mingw, :mswin]
-gem 'wdm', '>= 0.1.0', platforms: [:mingw, :mswin]
+gem "tzinfo-data", platforms: [:mingw, :mswin]
+gem "wdm", '>= 0.1.0', platforms: [:mingw, :mswin]
