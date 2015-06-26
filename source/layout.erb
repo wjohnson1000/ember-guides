@@ -16,7 +16,7 @@
 
     <%= yield_content :outside_wrapper %>
 
-    <div id="content-wrapper">
+    <div class="container">
       <%= partial "sidebar" %>
 
       <div id="content" class="has-sidebar">
@@ -36,7 +36,7 @@
 
     <%= yield_content :foot %>
 
-    <%= javascript_include_tag 'guides' %>
+    <%= javascript_include_tag 'common-modern', 'guides' %>
     <script src="http://static.jsbin.com/js/embed.js"></script>
 
     <script type="text/javascript">
