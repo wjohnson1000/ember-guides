@@ -11,11 +11,10 @@ $large-font-size: 1.5rem;
 $base-line-height: 1.5;
 $heading-line-height: 1.2;
 
-// Other Sizes
-$base-border-radius: 3px;
+// Spacing
 $base-spacing: $base-line-height * 1em;
 $small-spacing: $base-spacing / 2;
-$base-z-index: 0;
+$large-spacing: $base-spacing * 2;
 
 // Colors
 $ember-orange: #dd6a58;
@@ -28,17 +27,18 @@ $white: #fff;
 $black: #000;
 $creme: #FFFBF5;
 
-$body-background-color: $creme;
+$base-background-color: $creme;
+$sidebar-background-color: #FFFDF9;
 
 // Font Colors
-$base-background-color: $tan;
 $base-font-color: $brown;
 $dark-font-color: $dark-gray;
 $light-font-color: $light-brown;
 $action-color: $ember-orange;
 
 // Border
-$base-border-color: darken($base-background-color, 10%);
+$base-border-radius: 3px;
+$base-border-color: #F8E7CF;
 $base-border: 1px solid $base-border-color;
 
 // Forms
@@ -47,3 +47,6 @@ $form-box-shadow-focus: $form-box-shadow, 0 0 5px adjust-color($action-color, $l
 
 // Animations
 $duration: 200ms;
+
+// Z-indices
+$base-z-index: 0;

@@ -17,21 +17,16 @@
 
     <%= yield_content :outside_wrapper %>
 
-    <div class="container">
+    <main class="container">
       <%= partial "sidebar" %>
 
-      <div id="content" class="has-sidebar">
-        <div class="chapter">
-          <%= chapter_heading %>
-          <hr>
-
-          <%= yield %>
-
-
-          <%= chapter_links %>
-        </div>
-      </div>
-    </div>
+      <article class="content">
+        <%= chapter_heading %>
+        <hr>
+        <%= yield %>
+        <%= chapter_links %>
+      </article>
+    </main>
 
     <%= partial "footer" %>
 

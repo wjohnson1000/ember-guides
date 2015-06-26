@@ -1,0 +1,7 @@
+.content {
+  padding: $large-spacing 0;
+
+  @include media($large-screen) {
+    @include span-columns(8.5);
+  }
+}

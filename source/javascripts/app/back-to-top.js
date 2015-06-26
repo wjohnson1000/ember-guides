@@ -1,5 +1,5 @@
 $(function() {
-  var backToTop = $('#back-to-top');
+  var backToTop = $('.back-to-top');
   var doc = $(document);
   var offset = backToTop.offset();
   var marginTop = 90;
