@@ -1,28 +1,27 @@
 .highlight {
   border-radius: $base-border-radius;
-  font-family: Menlo, monospace;
+  font-family: $monospace-font-family;
   font-size: 0.8em;
   line-height: 1.5em;
   margin: $base-spacing 0 $large-spacing;
   overflow: hidden;
   position: relative;
 
-
   &.handlebars {
     .inline,
     .inline-delimiter,
     .delimiter {
-      color: lighten(green, 10%);
+      color: $highlight-green;
     }
 
     .inline {
       .attribute-name {
-        color: green;
+        color: $highlight-green;
       }
 
       .attribute-value,
       .content {
-        color: darken(green, 10%);
+        color: $highlight-green;
       }
     }
   }
@@ -86,8 +85,6 @@
       font-size: 9px;
     }
 
-    /* HTML */
-
     @each $tag, $color in $highlight-colors {
       .#{$tag} {
         color: $color;
@@ -96,19 +93,21 @@
   }
 
   .ribbon {
-    @include position(absolute, null 0 6px null);
+    @include position(absolute, 0.33em 0 null null);
     @include size(52px 20px);
+    background: 0 0 no-repeat;
+    background-size: 52px 20px;
   }
 
   &.javascript .ribbon,
   &.js .ribbon {
-    //@include hidpi('js-ribbon', png);
+    background-image: image-url('ribbon-js.svg');
   }
   &.html .ribbon {
-    //@include hidpi('html-ribbon', png);
+    background-image: image-url('ribbon-html.svg');
   }
   &.handlebars .ribbon {
-    //@include hidpi('handlebars-ribbon', png);
+    background-image: image-url('ribbon-hbs.svg');
   }
 
   .highlight-line {
@@ -149,4 +148,13 @@
       border-right-color: darken($highlight-red, 20%);
     }
   }
+}
+
+code {
+  background-color: $base-border-color;
+  border-radius: $base-border-radius;
+  font-family: $monospace-font-family;
+  font-size: 0.9em;
+  padding: 0.2em 0.5em;
+  margin: 0 0.1em;
 }
