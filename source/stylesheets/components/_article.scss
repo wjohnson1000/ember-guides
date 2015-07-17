@@ -21,15 +21,6 @@ article {
     }
   }
 
-  h2.anchorable-toc,
-  h3.anchorable-toc {
-    margin-top: $large-spacing;
-  }
-
-  h4.anchorable-toc {
-    margin-top: $base-spacing;
-  }
-
   ul {
     @extend %default-ul;
   }
@@ -75,5 +66,20 @@ article {
         transform: translateX(0.5em);
       }
     }
+  }
+}
+
+.anchorable-tock {
+  h2#{&},
+  h3#{&} {
+    margin-top: $large-spacing;
+  }
+
+  h4#{&} {
+    margin-top: $base-spacing;
+  }
+
+  hr + & {
+    margin-top: 0;
   }
 }
