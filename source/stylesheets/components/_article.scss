@@ -5,6 +5,31 @@ article {
     @include span-columns(8.5);
   }
 
+  .edit-page {
+    @include size(24px 18px);
+    color: $brown;
+    display: inline-block;
+    float: right;
+    font-size: 1rem;
+    margin: 0.5em 0 0 0;
+    opacity: 0.4;
+    overflow: hidden;
+
+    &:hover {
+      opacity: 1;
+      border-bottom: 0;
+    }
+  }
+
+  h2.anchorable-toc,
+  h3.anchorable-toc {
+    margin-top: $large-spacing;
+  }
+
+  h4.anchorable-toc {
+    margin-top: $base-spacing;
+  }
+
   ul {
     @extend %default-ul;
   }
