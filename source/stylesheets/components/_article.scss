@@ -5,6 +5,14 @@ article {
     @include span-columns(8.5);
   }
 
+  ul {
+    @extend %default-ul;
+  }
+
+  ol {
+    @extend %default-ol;
+  }
+
   footer {
     @include clearfix;
     border-top: $base-border;
