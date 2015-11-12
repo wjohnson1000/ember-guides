@@ -116,26 +116,15 @@ export default Ember.Helper.helper(function([arg1, arg2]) {
 });
 ```
 
-### Named Arguments
+NAMED ARGUMENTS
 
-Normal arguments are useful for passing data to be transformed into
-helper functions. However, because the order in which you pass arguments
-matters, it is usually best not to have helpers take more than one or
-two of them.
+Helper arguments are useful for passing data to be transformed into helper functions. However, because the order in which you pass these arguments matters, it is usually best not to have more than one or two of them.
 
-That said, sometimes you may want to make behavior of helpers
-configurable by the developers that call them from their templates. For
-example, let's abandon our Americentric ways and update our
-`format-currency` helper to take an optional configuration for which
-currency symbol to display.
+That said, sometimes you may want to make behavior of helpers configurable by the developers that call them from their templates. That’s where named arguments come in. For example, what if we want to format foreign currency? Let’s update our format-currency helper to take an optional argument for which currency symbol to display.
 
-Helpers allow you to pass named arguments as a JavaScript
-object that contains the name of the argument along with an associated
-value.  The order in which named arguments are supplied does not affect
-functionality.
+Named arguments are passed as a JavaScript object that contains the name of the argument along with an associated value. The order in which named arguments are supplied does not affect functionality.
 
-In this example, we can pass a `sign` argument to our `format-currency`
-helper:
+In this example, we can pass a sign argument to our format-currency helper:
 
 ```handlebars
 {{format-currency 350 sign="£"}}
